@@ -1,0 +1,16 @@
+{
+  "name": "Telegram Auto Forward Userbot",
+  "description": "Chune hue channels/groups ke video files ko apne channel par auto forward karta hai.",
+  "keywords": ["telegram", "pyrogram", "userbot", "autoforward"],
+  "env": {
+    "API_ID": { "description": "my.telegram.org se API ID", "required": true },
+    "API_HASH": { "description": "my.telegram.org se API HASH", "required": true },
+    "SESSION_STRING": { "description": "Pyrogram string session", "required": true },
+    "DEST_CHAT_ID": { "description": "Destination channel ID (jahan forward karna hai)", "required": true },
+    "LOG_GROUP_ID": { "description": "Log + command group ID", "required": true },
+    "SOURCE_CHATS": { "description": "Source chat IDs, comma separated (optional)", "required": false },
+    "DELAY": { "description": "Forwards ke beech delay seconds", "value": "2", "required": false }
+  },
+  "formation": { "worker": { "quantity": 1, "size": "basic" } },
+  "stack": "container"
+}
